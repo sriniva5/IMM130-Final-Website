@@ -11,8 +11,23 @@
       scroll-behavior: smooth; 
     }
     
-    .w3-display-container:hover #p1{
-      background-color: blue;
+    .overlay {
+      position: absolute; 
+      bottom: 0; 
+      background: rgb(0, 0, 0);
+      background: rgba(0, 0, 0, 0.5); /* Black see-through */
+      color: #f1f1f1; 
+      width: 100%;
+      transition: .5s ease;
+      opacity:0;
+      color: white;
+      font-size: 20px;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .w3-display-container:hover .overlay{
+      opacity: 1;
     }
   </style>
 </head>
@@ -70,21 +85,21 @@
 
   <div class="w3-row-padding">
     <div class="w3-col l3 m6 w3-margin-bottom" style="cursor:pointer;" onclick="window.location='https://github.com/sriniva5/Seinfeld-Doc2Vec';">
-      <div class="w3-display-container" id="p1">
+      <div class="w3-display-container">
         <div class="w3-display-topleft w3-black w3-padding">Seinfeld Doc2Vec</div>
         <img src="seinfeld.jpg" alt="Seinfeld" style="width:100%">
       </div>
     </div>
     
     <div class="w3-col l3 m6 w3-margin-bottom" style="cursor:pointer;" onclick="window.location='https://github.com/sriniva5/BookListingApp';">
-      <div class="w3-display-container" id="p1">
+      <div class="w3-display-container">
         <div class="w3-display-topleft w3-black w3-padding">Book Listing App</div>
         <img src="Screen Shot 2018-10-14 at 10.11.49 AM.png" alt="Book" style="width:100%">
       </div>
     </div>
     
     <div class="w3-col l3 m6 w3-margin-bottom" style="cursor:pointer;" onclick="window.location='https://github.com/sriniva5/TourGuideApp';">
-      <div class="w3-display-container" id="p1">
+      <div class="w3-display-container">
         <div class="w3-display-topleft w3-black w3-padding">Princeton Tour App</div>
         <img src="Screen Shot 2018-10-14 at 10.24.04 AM.png" alt="Tour" style="width:100%">
       </div>
@@ -94,6 +109,7 @@
       <div class="w3-display-container" id="p1">
         <div class="w3-display-topleft w3-black w3-padding">SuitUp App</div>
         <img src="Screen Shot 2018-10-14 at 10.08.45 AM.png" alt="Suit" style="width:100%; border:3px solid black;">
+        <div class="overlay">My Name is John</div>
       </div>
     </div>
   </div>
