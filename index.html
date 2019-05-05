@@ -7,18 +7,18 @@
 	<link rel="stylesheet" href="./styles.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	
+
 	<head>
 		<link rel="shortcut icon" type="image/x-icon" href="Screen Shot 2018-10-06 at 3.01.13 PM.png">
 		<script language="JavaScript" type="text/javascript">
 			$(function () {
 			  $(document).scroll(function () {
 				let $nav = $(".fixed-top");
-				
+
 				$nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
 			  });
 			});
-			
+
 			$(function() {
 				//open menu
 				$('#btn').on('show.bs.dropdown', function () {
@@ -27,7 +27,7 @@
 					$('#icon').addClass('fa fa-times fa-lg');
 				});
 			});
-			
+
 			$(function() {
 				//close menu
 				$('#btn').on('hide.bs.dropdown', function () {
@@ -37,14 +37,14 @@
 				});
 			});
 		</script>
-		
+
   		<style>
 			#desc {
 				position: relative;
 				height: 100vh;
 				width: 100wh;
   			}
-  			
+
   			#intro {
   				color: white;
   				position: absolute;
@@ -55,20 +55,20 @@
   				transform: translate(-50%, -50%);
   				text-shadow: 1px 1px 2px DimGray;
   			}
-  			
+
   			#contact_btn:hover {
   				color: Silver;
   			}
-  			
+
   			#contact_btn {
   				text-shadow: 1px 1px 1px DimGray;
   			}
   		</style>
 	</head>
-	
+
 	<body>
 		<header>
-			<nav class="navbar navbar-expand fixed-top">	
+			<nav class="navbar navbar-expand fixed-top">
 				<div class="mx-auto order-0">
 					<a id="head" class="navbar-brand mx-auto" href="./index.html">ANANYA SRINIVASAN</a>
 				</div>
@@ -85,7 +85,7 @@
 				</div>
 			</nav>
 		</header>
-		
+
 		<div id="outer">
 			<div id="desc">
 				<div id="intro">
@@ -95,5 +95,5 @@
 					<button type="button" id="contact_btn" class="btn btn-outline-light" onclick="location.href='./contact.html';">Contact</button>
 				</div>
 			</div>
-		</div>	
+		</div>
 </html>
