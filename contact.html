@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<title>Ananya Srinivasan</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="referrer" content="origin">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	
+	<head>
+		<link rel="shortcut icon" type="image/x-icon" href="Screen Shot 2018-10-06 at 3.01.13 PM.png">
+		<script language="JavaScript" type="text/javascript">
+			$(function () {
+			  $(document).scroll(function () {
+				let $nav = $(".fixed-top");
+				
+				$nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+			  });
+			});
+			
+			$(function() {
+				//open menu
+				$('#btn').on('show.bs.dropdown', function () {
+					$('.dropdown-menu').first().stop(true, true).slideDown();
+					$('#icon').removeClass('fa fa-bars fa-lg');
+					$('#icon').addClass('fa fa-times fa-lg');
+				});
+			});
+			
+			$(function() {
+				//close menu
+				$('#btn').on('hide.bs.dropdown', function () {
+					$('.dropdown-menu').first().stop(true, true).slideUp();
+					$('#icon').removeClass('fa fa-times fa-lg');
+					$('#icon').addClass('fa fa-bars fa-lg');
+				});
+			});
+			
+			function success() {
+				alert("Thank you for you message!");
+			}
+		</script>
+		
+  		<style>
+  		
+  			#about {
+  				text-align: center;
+  				color: DarkGray;
+  				text-shadow: 1px 1px 2px DimGray;
+  			}
+  			
+  			#hd {
+  				color: white;
+  				text-shadow: 1px 1px 2px DimGray;
+  				width: 50%;
+  				margin:0 auto;
+  				text-align: center;
+  				padding: 10px;
+  			}
+  			
+  			#foot {
+				padding: 20px;
+				opacity: 0.5;
+				float: right;
+			}
+  			
+  			textarea {
+  				resize: none;
+  			}
+  			
+  			input[type=text], input[type=email], input[type=message], textarea {
+				width: 100%;
+				padding: 12px 20px;
+				display: inline-block;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+				box-sizing: border-box;
+			}
+			
+			.sm {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+			}
+			
+			#media {
+				color: Silver;
+				padding: 5px;
+			}
+			
+			.message {
+				width: 50%;
+				margin: 0 auto;
+				padding-top: 20px;
+			}
+			
+			.fields {
+				padding: 5px;
+			}
+			
+			.btn {
+				width: 20vh;
+			}
+  			
+  			#inh {
+  				color: DarkGray;
+  				text-shadow: 1px 0.5px 0.5px DimGray;
+  			}
+  			
+  			#cb {
+  				text-align: center;
+  				padding: 5px;
+  			}
+  			
+  			a {
+  				color: SlateGray;
+  			}
+  			
+  			a:hover {
+  				color: SlateGray;
+  			}
+  		</style>
+	</head>
+	
+	<body>
+		<span id="top"></span>
+		<header>
+			<nav class="navbar navbar-expand fixed-top">	
+				<div class="mx-auto order-0">
+					<a id="head" class="navbar-brand mx-auto" href="./index.html">ANANYA SRINIVASAN</a>
+				</div>
+				<div class="w-100 order-3">
+					<button class="navbar-nav ml-auto dropdown" id="btn">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						  <i id="icon" style="color: white;" class="fa fa-bars fa-lg"></i>
+						</a>
+						<div id="menu" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+						  <a class="dropdown-item" href="./about.html">About</a>
+						  <a class="dropdown-item" href="./projects.html">Projects</a>
+						</div>
+					</button>
+				</div>
+			</nav>
+		</header>
+		
+		<div id="outer">
+			<div id="desc">
+				<h4 id="about">Contact</h4>
+				<p id="hd">Any inquiries about my work? Feel free to contact me!</p>
+			
+				<div class="sm">
+					<a href="https://github.com/sriniva5"><i id="media" class="fa fa-github fa-lg"></i></a>
+					<a href="https://www.linkedin.com/in/ananya-srinivasan-4a561a12b/"><i id="media" class="fa fa-linkedin fa-lg"></i></a>
+					<a href="https://www.instagram.com/ananya.mous/"><i id="media" class="fa fa-instagram fa-lg"></i></a>
+				</div>
+			</div>
+			
+			<div class="message">
+				<form action="http://formspree.io/sriniva5@tcnj.edu" method="POST"> 
+					<div class="fields">
+						<h5 id="inh">Name</h5>
+						<input type="text" name="name" placeholder="Your name">
+					</div>
+			
+					<div class="fields">
+						<h5 id="inh">Email</h5>
+						<input type="email" name="_replyto" placeholder="Your email">
+					</div>
+			
+					<div class="fields">
+						<h5 id="inh">Message</h5>
+						<textarea name="message" placeholder="Your message"></textarea>
+					</div>
+			
+					<div id="cb">
+						<input id="submit" type="submit" onclick="success()" class="btn btn-secondary" value="Send">
+			
+						<input type="hidden" name="_next" value="https://owd.tcnj.edu/~sriniva5/personal-site/contact.html"/>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+				</div>
+			</div>
+      </div>
+		
+		<footer>
+			<a href="#top"><i id="foot" style="color: DimGray;" class="fa fa-chevron-up fa-lg"></i></a>
+		</footer>
+	</body>
+</html>

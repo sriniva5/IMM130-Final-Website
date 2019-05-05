@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+	<title>Ananya Srinivasan</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	
+	<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Gugi' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Modak' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Source Code Pro' rel='stylesheet'>
+	
+	<head>
+		<link rel="shortcut icon" type="image/x-icon" href="Screen Shot 2018-10-06 at 3.01.13 PM.png">
+		<script language="JavaScript" type="text/javascript">
+			$(function () {
+			  $(document).scroll(function () {
+				let $nav = $(".fixed-top");
+				
+				$nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+			  });
+			});
+			
+			$(function() {
+				//open menu
+				$('#btn').on('show.bs.dropdown', function () {
+					$('.dropdown-menu').first().stop(true, true).slideDown();
+					$('#icon').removeClass('fa fa-bars fa-lg');
+					$('#icon').addClass('fa fa-times fa-lg');
+				});
+			});
+			
+			$(function() {
+				//close menu
+				$('#btn').on('hide.bs.dropdown', function () {
+					$('.dropdown-menu').first().stop(true, true).slideUp();
+					$('#icon').removeClass('fa fa-times fa-lg');
+					$('#icon').addClass('fa fa-bars fa-lg');
+				});
+			});
+			
+			function fontChange(){
+				let family = new Array;
+				family[0] = "\"Sofia\"";
+				family[1] = "\"Gugi\"";
+				family[2] = "\"Poppins\"";
+				family[3] = "\"Modak\"";
+				family[4] = "\"Lobster\"";
+				family[5] = "\"Source Code Pro\"";
+				
+				let randFont = Math.floor(Math.random()*family.length);
+				document.getElementById("about").style.fontFamily = family[randFont];
+			}
+		</script>
+		
+  		<style>
+  		
+  			#about {
+  				text-align: center;
+  				color: DarkGray;
+  				text-shadow: 1px 1px 2px DimGray;
+  				cursor: pointer;
+  			}
+  			
+  			#hd {
+  				color: white;
+  				text-shadow: 1px 1px 2px DimGray;
+  				width: 50%;
+  				margin:0 auto;
+  				text-align: center;
+  				padding: 10px;
+  			}
+  			
+  			#foot {
+				padding: 20px;
+				opacity: 0.5;
+				float: right;
+			}
+
+  			a {
+  				color: Silver;
+  			}
+  			
+  			a:hover {
+  				color: SlateGray;
+  			}
+  			
+  			#cardlink {
+  				color: DimGray;
+  			}
+  			
+  			.grid-container {
+  				display: grid;
+  				grid-gap: 20px;
+  				grid-template-columns: auto auto auto;
+  				align-items: center;
+  				justify-items: center;
+  				padding: 40px;
+  			}
+  			
+  			.card {
+  				height: 100%;
+  			}
+  			
+  			.card:hover {
+  				box-shadow: 2px 2px 5px 1px grey; 
+  			}
+  		</style>
+	</head>
+	
+	<body>
+		<span id="top"></span>
+		<header>
+			<nav class="navbar navbar-expand fixed-top">	
+				<div class="mx-auto order-0">
+					<a id="head" class="navbar-brand mx-auto" href="./index.html">ANANYA SRINIVASAN</a>
+				</div>
+				<div class="w-100 order-3">
+					<button class="navbar-nav ml-auto dropdown" id="btn">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						  <i id="icon" style="color: white;" class="fa fa-bars fa-lg"></i>
+						</a>
+						<div id="menu" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+						  <a class="dropdown-item" href="./about.html">About</a>
+						  <a class="dropdown-item" href="./contact.html">Contact</a>
+						</div>
+					</button>
+				</div>
+			</nav>
+		</header>
+		
+		<div id="outer">
+			<div id="desc">
+				<h4 id="about" onclick="fontChange()">Projects</h4>
+				<p id="hd">Check out some of my featured coding projects from my <a href="https://github.com/sriniva5">Github page,</a> and feel free to click the "Projects" header for a surprise!</p>
+			</div>
+			
+		</div>
+		
+		<div class="grid-container">
+			<div class="card" style="max-width: 202px;">
+				<a id="cardlink" href="https://github.com/sriniva5/ObjectRecognitionOpenCV">
+					<!-- Image -->
+					<img class="card-img-top" src="./images/opencv.png" alt="opencv">
+
+					<!-- Text Content -->
+					<div class="card-body">
+					<p class="card-text">Image Recognition with OpenCV</p>
+					</div>
+				</a>
+			</div>
+			
+			<div class="card" style="max-width: 202px;">
+				<a id="cardlink" href="https://github.com/sriniva5/Seinfeld-Doc2Vec">
+					<!-- Image -->
+					<img class="card-img-top" src="./images/seinfeld.jpeg" alt="seinfeld">
+
+					<!-- Text Content -->
+					<div class="card-body">
+					<p class="card-text">Seinfeld Quote Doc2Vec</p>
+					</div>
+				</a>
+			</div>
+			
+			<div class="card" style="max-width: 202px;">
+				<a id="cardlink" href="https://www.youtube.com/watch?v=aEccavpf7g8">
+					<!-- Image -->
+					<img class="card-img-top" src="./images/screenshot.png" alt="tenk">
+
+					<!-- Text Content -->
+					<div class="card-body">
+					<p class="card-text">Ten Karat</p>
+					</div>
+				</a>
+			</div>
+			
+			<div class="card" style="max-width: 202px;">
+				<a id="cardlink" href="https://www.youtube.com/watch?v=P4CXDOxhXFg">
+					<!-- Image -->
+					<img class="card-img-top" src="./images/heaps.png" alt="heaps">
+
+					<!-- Text Content -->
+					<div class="card-body">
+					<p class="card-text">Heap Presentation</p>
+					</div>
+				</a>
+			</div>
+			
+			<div class="card" style="max-width: 202px;">
+				<!-- Image -->
+				<img class="card-img-top" src="./images/opencv.png" alt="opencv">
+
+				<!-- Text Content -->
+				<div class="card-body">
+				<p class="card-text">Project</p>
+				</div>
+			</div>
+			
+			<div class="card" style="max-width: 202px;">
+				<!-- Image -->
+				<img class="card-img-top" src="./images/opencv.png" alt="opencv">
+
+				<!-- Text Content -->
+				<div class="card-body">
+				<p class="card-text">Project</p>
+				</div>
+			</div>
+			
+			<div class="card" style="max-width: 202px;">
+				<!-- Image -->
+				<img class="card-img-top" src="./images/opencv.png" alt="opencv">
+
+				<!-- Text Content -->
+				<div class="card-body">
+				<p class="card-text">Project</p>
+				</div>
+			</div>
+			
+			<div class="card" style="max-width: 202px;">
+				<!-- Image -->
+				<img class="card-img-top" src="./images/opencv.png" alt="opencv">
+
+				<!-- Text Content -->
+				<div class="card-body">
+				<p class="card-text">Project</p>
+				</div>
+			</div>
+			
+			<div class="card" style="max-width: 202px;">
+				<!-- Image -->
+				<img class="card-img-top" src="./images/opencv.png" alt="opencv">
+
+				<!-- Text Content -->
+				<div class="card-body">
+				<p class="card-text">Project</p>
+				</div>
+			</div>
+		</div>
+		
+		<footer>
+			<a href="#top"><i id="foot" style="color: DimGray;" class="fa fa-chevron-up fa-lg"></i></a>
+		</footer>
+	</body>
+</html>

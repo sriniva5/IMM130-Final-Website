@@ -39,34 +39,66 @@
 		</script>
 		
   		<style>
-			#desc {
-				position: relative;
-				height: 100vh;
-				width: 100wh;
-  			}
-  			
-  			#intro {
-  				color: white;
-  				position: absolute;
-  				padding-top: 40px;
+  		
+  			#about {
   				text-align: center;
-  				top: 50%;
-  				left: 50%;
-  				transform: translate(-50%, -50%);
+  				color: DarkGray;
   				text-shadow: 1px 1px 2px DimGray;
   			}
   			
-  			#contact_btn:hover {
-  				color: Silver;
+  			#res-head {
+  				text-align: center;
+  				color: DarkGray;
+  				text-shadow: 1px 1px 2px DimGray;
+  				padding-top: 30px;
   			}
   			
-  			#contact_btn {
-  				text-shadow: 1px 1px 1px DimGray;
+  			li {
+  				color: DimGray;
+  				text-align: left;
+  				padding: 5px;
+  			}
+  			
+  			#hd {
+  				color: white;
+  				text-shadow: 1px 1px 2px DimGray;
+  				width: 50%;
+  				margin:0 auto;
+  				text-align: center;
+  				padding: 10px;
+  			}
+  			
+  			#foot {
+				padding: 20px;
+				opacity: 0.5;
+				float: right;
+			}
+  			
+  			.resume {
+  				margin: 0 auto;
+  				display: flex;
+  				flex-direction: row;
+  				justify-content: space-evenly;
+  				padding: 20px;
+  			}
+  			
+  			#dd {
+  				color: DimGray;
+  				text-align: center;
+  			}
+  			
+  			a {
+  				color: SlateGray;
+  			}
+  			
+  			a:hover {
+  				color: SlateGray;
   			}
   		</style>
 	</head>
 	
 	<body>
+		<span id="top"></span>
 		<header>
 			<nav class="navbar navbar-expand fixed-top">	
 				<div class="mx-auto order-0">
@@ -78,8 +110,8 @@
 						  <i id="icon" style="color: white;" class="fa fa-bars fa-lg"></i>
 						</a>
 						<div id="menu" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-						  <a class="dropdown-item" href="./about.html">About</a>
 						  <a class="dropdown-item" href="./projects.html">Projects</a>
+						  <a class="dropdown-item" href="./contact.html">Contact</a>
 						</div>
 					</button>
 				</div>
@@ -88,12 +120,39 @@
 		
 		<div id="outer">
 			<div id="desc">
-				<div id="intro">
-					<h4>I'm a </h4>
-					<h1>Software Engineer</h1>
-					<h4>who brings the human touch to AI</h4>
-					<button type="button" id="contact_btn" class="btn btn-outline-light" onclick="location.href='./contact.html';">Contact</button>
-				</div>
+				<h4 id="about">About</h4>
+				<p id="hd">I'm a <i style="color:silver;">Software Developer</i> with interests in NLP and Computer Vision. My goal is to improve the way humans interact with automated software. I love figuring out how things work — even if it means taking them apart and putting them back together. I recently graduated from <a href="https://tcnj.edu/"><i style="color:silver;">The College of New Jersey</i></a> with a degree in Computer Science.</p>
 			</div>
-		</div>	
+			
+			<div class="resume">
+					<div class="resume-child">
+						<h4 id="res-head">Work Experience</h4>
+						<ul>
+							<li><b>Comcast-NBCUniversal:</b> June 2019-present</li>
+							<li><b>S&P Global Ratings:</b> Summer 2018, Spring 2019</li>
+							<li><b>NIST Information Technology Lab:</b> Summer 2017</li>
+						</ul>
+					</div>
+					
+					<div class="resume-child">
+						<h4 id="res-head">Skills</h4>
+						<ul>
+							<li><b>Programming Languages: </b> Java, C++/C, Python, Javascript</li>
+							<li><b>Databases: </b>PostgresSQL, MySQL, SQLite, DynamoDB</li>
+							<li><b>Spoken Languages: </b>English, Tamil, French (elementary)</li>
+						</ul>
+					</div>
+			</div>
+			
+			<div class="resume">
+				<img src="./images/mosaic.png" alt="mosaic" width="80%" height="500">
+			</div>
+			
+			<p id="dd">Mosaic at Magic Gardens, PA. More photos on my <a href="https://www.instagram.com/ananya.mous/">instagram</a></p>
+		</div>
+		
+		<footer>
+			<a href="#top"><i id="foot" style="color: DimGray;" class="fa fa-chevron-up fa-lg"></i></a>
+		</footer>
+	</body>
 </html>
